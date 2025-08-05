@@ -1,0 +1,16 @@
+{
+  "name": "ip-address-tracker-frontend-mentor",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

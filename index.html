@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="font-sans h-screen flex flex-col">
+  <div class="-z-1 bg-[url('/images/pattern-bg-desktop.png')] bg-cover bg-center h-[37vh] md:h-[45vh] w-full"></div>
+  <main class="fixed top-0 flex flex-col gap-8 p-6 text-center justify-center w-full items-center">
+
+    <h1 class="text-white text-xl md:text-2xl">IP Address Tracker</h1>
+
+    
+    <div class="flex rounded-xl overflow-hidden bg-white justify-between max-w-[560px] w-full cursor-pointer">
+      <input type="number" id="IP" class="placeholder-black py-2 px-5 grow" placeholder="192.212.174.101">
+      <button aria-label="consult IP" class="bg-black p-4 cursor-pointer hover:bg-gray-950">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" aria-label="Consult IP"><path fill="none" stroke="#fff" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+      </button>
+    </div>
+  
+    <ul class="grid xs:grid-cols-2  sm:grid-cols-4  gap-4 rounded-xl p-6 bg-white max-w-[1000px] w-full h-28">
+      <li class="flex flex-col justify-center">
+        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">IP ADDRESS</h2>
+        <p class="font-semibold py-1 md:text-lg">192.212.174.101</p>
+      </li>
+      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
+        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">LOCATION</h2>
+        <p class="font-semibold py-1 md:text-lg">Brooklyn, NY 10001</p>
+      </li>
+      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
+        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">TIMEZONE</h2>
+        <p class="font-semibold py-1 md:text-lg">UTC -05:00</p>
+      </li>
+      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
+        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">ISP</h2>
+        <p class="font-semibold py-1 md:text-lg">SpaceX Starlink</p>
+      </li>
+    </ul>
+    
+  </main>
+  <section class="h-screen bg-amber-500"></section>
+  
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Adriaxy</a>.
+  </footer> -->
+</body>
+</html>
