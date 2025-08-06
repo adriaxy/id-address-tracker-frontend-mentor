@@ -10,47 +10,51 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="./src/output.css">
-  <link rel="stylesheet" href="./src/styles.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 <body class="font-sans h-screen flex flex-col">
-  <div class="-z-1 bg-[url('/images/pattern-bg-desktop.png')] bg-cover bg-center h-[37vh] md:h-[45vh] w-full"></div>
-  <main class="fixed top-0 flex flex-col gap-8 p-6 text-center justify-center w-full items-center">
+  <main class="flex flex-col p-6 pt-9  text-center justify-start w-full items-center z-20 bg-[url('/images/pattern-bg-mobile.png')]
+   sm:bg-[url('/images/pattern-bg-desktop.png')] bg-cover bg-center h-72 sm:h-[220px] relative">
 
-    <h1 class="text-white text-xl md:text-2xl">IP Address Tracker</h1>
+    <h1 class="text-white text-xl md:text-2xl mb-3.5">IP Address Tracker</h1>
 
     
-    <div class="flex rounded-xl overflow-hidden bg-white justify-between max-w-[560px] w-full cursor-pointer">
-      <input type="number" id="IP" class="placeholder-black py-2 px-5 grow" placeholder="192.212.174.101">
+    <form class="flex rounded-xl overflow-hidden bg-white justify-between max-w-[560px] w-full cursor-pointer form">
+      <input type="text" id="IP" class="placeholder-gray-400 py-2 px-5 grow min-w-0" placeholder="Search for any IP address or domain">
       <button aria-label="consult IP" class="bg-black p-4 cursor-pointer hover:bg-gray-950">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" aria-label="Consult IP"><path fill="none" stroke="#fff" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
       </button>
-    </div>
+    </form>
   
-    <ul class="grid xs:grid-cols-2  sm:grid-cols-4  gap-4 rounded-xl p-6 bg-white max-w-[1000px] w-full h-28">
-      <li class="flex flex-col justify-center">
-        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">IP ADDRESS</h2>
-        <p class="font-semibold py-1 md:text-lg">192.212.174.101</p>
-      </li>
-      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
-        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">LOCATION</h2>
-        <p class="font-semibold py-1 md:text-lg">Brooklyn, NY 10001</p>
-      </li>
-      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
-        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">TIMEZONE</h2>
-        <p class="font-semibold py-1 md:text-lg">UTC -05:00</p>
-      </li>
-      <li class="sm:border-l border-l-gray-400/30 flex flex-col justify-center">
-        <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">ISP</h2>
-        <p class="font-semibold py-1 md:text-lg">SpaceX Starlink</p>
-      </li>
-    </ul>
+  
+    <ul class="flex flex-col h-72 w-[92%] sm:h-[130px] sm:flex-row rounded-xl p-6 bg-white sm:max-w-[1000px] mx-auto text-center sm:text-left absolute top-36">
+        <li class="flex flex-1 flex-col justify-center">
+            <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">IP ADDRESS</h2>
+            <p class="font-semibold py-1 md:text-xl sm:h-16 ip">81.45.23.10</p>
+        </li>
+        <li class="flex flex-1 flex-col justify-center sm:border-l sm:border-l-gray-400/30 sm:pl-5">
+            <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">LOCATION</h2>
+            <p class="font-semibold py-1 md:text-xl sm:h-16 location">Comunidad de Madrid, ES</p>
+          </li>
+        <li class="flex flex-1 flex-col justify-center sm:border-l sm:border-l-gray-400/30 sm:pl-5">
+          <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">TIMEZONE</h2>
+          <p class="font-semibold py-1 md:text-xl sm:h-16 timezone">+02:00</p>
+        </li>
+          <li class="flex flex-1 flex-col justify-center sm:border-l sm:border-l-gray-400/30 sm:pl-5">
+          <h2 class="text-gray-400 text-xs tracking-[1.5px] font-semibold">ISP</h2>
+          <p class="font-semibold py-1 md:text-xl sm:h-16 isp">Telefonica de España</p>
+        </li>
+      </ul>
+
     
   </main>
-  <section class="h-screen bg-amber-500"></section>
-  
-  <!-- <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Adriaxy</a>.
-  </footer> -->
+  <div id="map" class="flex-1 z-10"></div>
+  <script type="module" src="main2.js"></script>
 </body>
 </html>
